@@ -42,7 +42,7 @@ sambamba markdup -r -t 8 02-read-align/Flower1_sort.bam 02-read-align/Flower1_ma
 sambamba markdup -r -t 8 02-read-align/Flower3_sort.bam 02-read-align/Flower3_markdup.bam
 sambamba markdup -r -t 8 02-read-align/Maxxa_sort.bam 02-read-align/Maxxa_markdup.bam
 sambamba markdup -r -t 8 02-read-align/TX2094-SZ_sort.bam 02-read-align/TX2094-SZ_markdup.bam
-#使用GATK进行SNP calling
+# 使用GATK进行SNP calling
 for sample in Flower1 Flower3 Maxxa TX2094-SZ; do
   gatk HaplotypeCaller \
     -R ../ref/AD1_TM-1_UTX.3.0.fa \
