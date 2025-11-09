@@ -23,7 +23,7 @@ sample="Flower1 Flower3 Maxxa TX2094-SZ"
 R1="${CLEAN_DATA_DIR}/${sample}_1.fq.gz"
 R2="${CLEAN_DATA_DIR}/${sample}_2.fq.gz"
 echo "Processing sample: ${sample}"
-#BWA比对 → samtools排序 → 索引
+# BWA比对 → samtools排序 → 索引
 bwa mem -M -R "@RG\\tID:${sample}\\tSM:${sample}\\tPL:ILLUMINA" \
         -t ${NUMBER_BWA_THREADS} ${REFERENCE} ${R1} ${R2} \
         | samtools sort -@ ${NUMBER_SAMTOOLS_THREADS} \
